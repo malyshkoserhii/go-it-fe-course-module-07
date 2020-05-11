@@ -1,0 +1,51 @@
+*::before,
+*::after {
+    display: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex-grow: 2;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: a4uto;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input {
+    cursor: pointer;
+}
+
+.container {
+    width: 940px;
+    margin: 0px auto;
+}
+
+:root {
+    --logo-font: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    --main-title-font: Arial, sans-serif;
+    --title-description-font: Helvetica, sans-serif;
+    --services-description-font: 'Courier New', Courier,
+        monospace;
+}
