@@ -1,3 +1,77 @@
+@import url("https://use.typekit.net/uoo5tjb.css");
+
+/* petit-formal-script-regular - latin */
+@font-face {
+  font-family: "Petit Formal Script";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Petit Formal Script"), local("PetitFormalScript-Regular"),
+    url("../fonts/petit-formal-script-v7-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/petit-formal-script-v7-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-regular - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Montserrat Regular"), local("Montserrat-Regular"),
+    url("../fonts/montserrat-v14-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* montserrat-700 - latin */
+@font-face {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Montserrat Bold"), local("Montserrat-Bold"),
+    url("../fonts/montserrat-v14-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/montserrat-v14-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-slab-regular - latin */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 400;
+  src: local(""),
+    url("../fonts/roboto-slab-v11-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/roboto-slab-v11-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-slab-700 - latin */
+@font-face {
+  font-family: "Roboto Slab";
+  font-style: normal;
+  font-weight: 700;
+  src: local(""),
+    url("../fonts/roboto-slab-v11-latin-700.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/roboto-slab-v11-latin-700.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* adamina-regular - latin; This is additional font in case "Droid Serif" is unavailable*/
+@font-face {
+  font-family: "Adamina";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Adamina Regular"), local("Adamina-Regular"),
+    url("../fonts/adamina-v13-latin-regular.woff2") format("woff2"),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */
+      url("../fonts/adamina-v13-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 *::before,
 *::after {
   display: inherit;
@@ -19,7 +93,7 @@ main {
 img {
   display: block;
   max-width: 100%;
-  height: a4uto;
+  height: auto;
 }
 
 a {
@@ -38,7 +112,7 @@ h2,
 h3,
 p {
   margin: 0px auto;
-  padding: 0px auto;
+  padding: 0px;
 }
 
 button {
@@ -51,16 +125,14 @@ button {
 }
 
 :root {
-  --logo-font: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  --title-font: Arial, sans-serif;
-  --title-description-font: Helvetica, sans-serif;
-  --services-description-font: "Courier New", Courier, monospace;
+  --logo-font: "Petit Formal Script", serif;
+  --title-font: "Montserrat", sans-serif;
+  --title-description-font: "Droid Serif", "Adamina", serif;
+  --services-description-font: "Roboto Slab", serif;
 }
 
-/* HEADER, NAVIGATION  */
-
 .page-header {
-  padding: 36px 0 103px;
+  padding: 36px 0px 103px;
 }
 
 .page-navigation {
@@ -72,6 +144,8 @@ button {
 .logo {
   font-family: var(--logo-font);
   font-size: 24px;
+  font-weight: 700;
+  font-style: italic;
   line-height: 41px;
   color: rgb(254, 209, 54);
   flex-basis: 87px;
@@ -98,8 +172,6 @@ button {
   align-items: flex-end;
 }
 
-/* SERVICES  */
-
 .services {
   padding-bottom: 116px;
 }
@@ -124,7 +196,6 @@ button {
   font-style: italic;
   color: rgb(119, 119, 119);
   text-align: center;
-  /* line-height: 18.4px; according to normalize.css  */
 }
 
 .services > .title-description {
@@ -192,27 +263,23 @@ button {
   color: rgb(119, 119, 119);
   text-align: center;
   width: 300px;
-  /* line-height: 16.1px; according to normalize.css */
 }
-
-/* CONTACT-US  */
 
 .contact-us {
   padding: 108px 0px 114px;
   background-color: rgb(34, 34, 34);
   background-image: url("../img/map.png");
   background-repeat: no-repeat;
-  background-position: right bottom 20px;
+  background-position: right bottom 18px;
 }
 
 .contact-us-title {
   color: rgb(255, 255, 255);
   margin-bottom: 24px;
-  /* line-height: 46px; according to normalize.css */
 }
 
 .contact-us-wrapper > .title-description {
-  margin-bottom: 24px;
+  margin-bottom: 74px;
 }
 
 .contact-us-form-wrapper {
