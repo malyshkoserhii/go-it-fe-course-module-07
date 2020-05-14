@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework-module-07-fonts</title>
+    <title>Homework-module-07-fonts-forms</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/normalize.css" />
   </head>
@@ -70,36 +70,46 @@
           <p class="title-description">
             Proin iaculis purus consequat sem cure.
           </p>
-          <form action="#" class="contact-us-form">
-            <div class="contact-us-user-info-wrapper">
-              <input
-                type="text"
-                class="contact-us-user-info"
-                placeholder="your Name *"
-              />
-              <input
-                type="email"
-                class="contact-us-user-info"
-                placeholder="your e-mail *"
-              />
-              <input
-                type="text"
-                class="contact-us-user-info"
-                placeholder="subject"
-              />
+          <form action="#">
+            <div class="contact-us-form-wrapper">
+              <div class="contact-us-user-info-wrapper">
+                <input
+                  type="text"
+                  name="user_name"
+                  class="contact-us-user-info"
+                  placeholder="your Name *"
+                  required
+                  minlength="3"
+                />
+                <input
+                  type="email"
+                  name="user_email"
+                  class="contact-us-user-info"
+                  placeholder="your e-mail *"
+                  required
+                />
+                <input
+                  type="text"
+                  name="user_subject"
+                  class="contact-us-user-info"
+                  placeholder="subject"
+                />
+              </div>
+              <div class="contact-us-user-msg-wrapper">
+                <textarea
+                  name="user_message"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class="contact-us-user-msg"
+                  placeholder="Your message *"
+                  required
+                  maxlength="1000"
+                ></textarea>
+              </div>
             </div>
-            <div class="contact-us-user-msg-wrapper">
-              <textarea
-                name=""
-                id=""
-                cols="30"
-                rows="10"
-                class="contact-us-user-msg"
-                placeholder="Your message *"
-              ></textarea>
-            </div>
+            <button class="send-msg-btn">send message</button>
           </form>
-          <button class="send-msg-btn">send message</button>
         </div>
       </section>
     </main>

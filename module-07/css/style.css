@@ -202,7 +202,7 @@ button {
   background-color: rgb(34, 34, 34);
   background-image: url("../img/map.png");
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: right bottom 20px;
 }
 
 .contact-us-title {
@@ -215,7 +215,7 @@ button {
   margin-bottom: 24px;
 }
 
-.contact-us-form {
+.contact-us-form-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -223,9 +223,6 @@ button {
 }
 
 .contact-us-user-info-wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   width: 459px;
 }
 
@@ -238,6 +235,11 @@ button {
   height: 52px;
   padding: 10px 21px;
 }
+
+.contact-us-user-info:not(:last-child) {
+  margin-bottom: 34px;
+}
+
 .contact-us-user-info::placeholder,
 .contact-us-user-msg::placeholder {
   font-family: var(--title-font);
@@ -258,8 +260,28 @@ button {
   border-radius: 5px;
   background-color: rgb(255, 255, 255);
   width: 459px;
-  padding: 18px 20px 0px;
+  padding: 18px 20px;
   resize: none;
+}
+
+.contact-us-user-info:focus {
+  outline: none;
+}
+
+.contact-us-user-info:required:focus:valid:not(:placeholder-shown) {
+  outline: 3px solid #32cd32;
+}
+
+.contact-us-user-info:required:focus:invalid:not(:placeholder-shown) {
+  outline: 3px solid #ff0000;
+}
+
+.contact-us-user-msg:required:focus:valid:not(:placeholder-shown) {
+  outline: 3px solid #32cd32;
+}
+
+.contact-us-user-msg:required:focus:invalid:not(:placeholder-shown) {
+  outline: 3px solid #ff0000;
 }
 
 .send-msg-btn {
